@@ -29,6 +29,8 @@ public class StationController {
      */
     @GetMapping("/nearest-station")
     public Map<String, Station> getNearestStation(@RequestParam("lat") double latitude, @RequestParam("lon") double longitude){
+    	System.out.println("getNearestStation 호출");
+    	System.out.println("latitude :"+latitude + " longitude:"+ longitude);
         return stationService.getNearestStationInfo(latitude, longitude);
     }
 }

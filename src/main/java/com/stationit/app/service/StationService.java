@@ -81,6 +81,10 @@ public class StationService {
         if (nextStation != null) {
             result.put("next", nextStation);
         }
+        
+        // test
+        result.put("2", new Station("신림", userLon, userLon, "2호선", 0));
+        result.put("3", new Station("봉천", userLon, userLon, "2호선, 3호선", 0));
 
         return result;
     }
